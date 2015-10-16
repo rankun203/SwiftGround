@@ -30,9 +30,13 @@ class RestaurantTableViewController: UITableViewController {
         cell.cellName.text = restaurantNames[indexPath.row]
         cell.cellLocation.text = restaurantLocations[indexPath.row]
         cell.cellType.text = restaurantTypes[indexPath.row]
+        
+        cell.cellName.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.cellName.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.cellName.layer.shadowRadius = CGFloat(2)
+        cell.cellName.layer.shadowOpacity = 0.5
+        cell.cellName.clipsToBounds = true
 
-        cell.cellImage.layer.cornerRadius = cell.cellImage.frame.size.width / 2
-        cell.cellImage.clipsToBounds = true
         return cell
     }
     

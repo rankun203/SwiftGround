@@ -2,72 +2,65 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XLS-oC-Jvn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Restaurant Table View Controller-->
         <scene sceneID="Zll-h0-SAH">
             <objects>
                 <tableViewController id="XLS-oC-Jvn" customClass="RestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="On1-fD-1s9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" id="On1-fD-1s9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="tAD-KL-IaT" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="tAD-KL-IaT" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tAD-KL-IaT" id="eja-fz-jxH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="349.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellImage" translatesAutoresizingMaskIntoConstraints="NO" id="3Td-X5-Etc">
-                                            <rect key="frame" x="23" y="10" width="60" height="59.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellImage" translatesAutoresizingMaskIntoConstraints="NO" id="3Td-X5-Etc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="Ow9-ZA-wGc"/>
-                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellName" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Op-SR-1vj">
-                                            <rect key="frame" x="93" y="10" width="500" height="20.5"/>
+                                            <rect key="frame" x="265.5" y="56.5" width="69.5" height="33"/>
                                             <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="tZj-NM-NgR"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="cellLocation" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93b-Gd-aPg">
-                                            <rect key="frame" x="93" y="31" width="500" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellLocation" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93b-Gd-aPg">
+                                            <rect key="frame" x="268" y="107" width="62.5" height="22"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="cellType" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAf-nE-7K4">
+                                            <rect key="frame" x="286" y="134" width="28.5" height="18"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="cellType" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAf-nE-7K4">
-                                            <rect key="frame" x="93" y="51" width="500" height="20.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="9Op-SR-1vj" firstAttribute="top" secondItem="3Td-X5-Etc" secondAttribute="top" id="9cR-v6-V6X"/>
-                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="top" secondItem="eja-fz-jxH" secondAttribute="topMargin" constant="2" id="Hzr-Qx-xjd"/>
-                                        <constraint firstItem="iAf-nE-7K4" firstAttribute="leading" secondItem="3Td-X5-Etc" secondAttribute="trailing" constant="10" id="JqL-8A-KJV"/>
-                                        <constraint firstItem="93b-Gd-aPg" firstAttribute="width" secondItem="9Op-SR-1vj" secondAttribute="width" id="Miw-8e-cfp"/>
-                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="centerY" secondItem="eja-fz-jxH" secondAttribute="centerY" id="NGp-VU-gyC"/>
-                                        <constraint firstItem="93b-Gd-aPg" firstAttribute="leading" secondItem="3Td-X5-Etc" secondAttribute="trailing" constant="10" id="Na4-CS-qrU"/>
-                                        <constraint firstItem="iAf-nE-7K4" firstAttribute="top" secondItem="93b-Gd-aPg" secondAttribute="bottom" id="evL-YP-zRU"/>
-                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="leading" secondItem="eja-fz-jxH" secondAttribute="leadingMargin" constant="15" id="qg4-hK-Ikf"/>
-                                        <constraint firstItem="93b-Gd-aPg" firstAttribute="top" secondItem="9Op-SR-1vj" secondAttribute="bottom" id="sVq-dF-qgT"/>
-                                        <constraint firstItem="iAf-nE-7K4" firstAttribute="width" secondItem="93b-Gd-aPg" secondAttribute="width" id="v1A-uQ-cJ0"/>
-                                        <constraint firstItem="9Op-SR-1vj" firstAttribute="width" secondItem="eja-fz-jxH" secondAttribute="width" constant="-100" id="vfm-Dn-DxR"/>
-                                        <constraint firstItem="9Op-SR-1vj" firstAttribute="leading" secondItem="3Td-X5-Etc" secondAttribute="trailing" constant="10" id="xz3-CT-E88"/>
+                                        <constraint firstItem="iAf-nE-7K4" firstAttribute="top" secondItem="93b-Gd-aPg" secondAttribute="bottom" constant="5" id="4Kj-z7-OnQ"/>
+                                        <constraint firstItem="93b-Gd-aPg" firstAttribute="top" secondItem="9Op-SR-1vj" secondAttribute="bottom" constant="17" id="5g5-t2-0lB"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="leading" secondItem="eja-fz-jxH" secondAttribute="leading" id="AdY-mh-07y"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="top" secondItem="eja-fz-jxH" secondAttribute="top" id="CGp-iD-v4h"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="top" secondItem="9Op-SR-1vj" secondAttribute="bottom" constant="-90" id="FXm-Fj-6j7"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="centerX" secondItem="eja-fz-jxH" secondAttribute="centerX" id="JFq-R5-GJF"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="height" secondItem="eja-fz-jxH" secondAttribute="height" id="Nb6-bA-sY5"/>
+                                        <constraint firstItem="iAf-nE-7K4" firstAttribute="centerX" secondItem="3Td-X5-Etc" secondAttribute="centerX" id="S7r-86-KpV"/>
+                                        <constraint firstItem="93b-Gd-aPg" firstAttribute="centerX" secondItem="3Td-X5-Etc" secondAttribute="centerX" id="ami-CW-5Jt"/>
+                                        <constraint firstItem="9Op-SR-1vj" firstAttribute="centerX" secondItem="3Td-X5-Etc" secondAttribute="centerX" id="eTQ-fJ-XdG"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="centerY" secondItem="eja-fz-jxH" secondAttribute="centerY" id="jFc-6Y-kuy"/>
+                                        <constraint firstItem="3Td-X5-Etc" firstAttribute="width" secondItem="eja-fz-jxH" secondAttribute="width" id="zdA-n8-Tuo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
