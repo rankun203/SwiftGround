@@ -78,22 +78,37 @@ class RestaurantTableViewController: UITableViewController {
         self.presentViewController(optionMenu, animated: true, completion: nil)
     }
     
-    // Swipe
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+
+        let callAction = UITableViewRowAction(style: .Normal, title: "Call     ", handler: {(action: UITableViewRowAction, indexPath: NSIndexPath) -> Void in
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .Alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertMessage, animated: true, completion: nil)
+            tableView.setEditing(false, animated: true)
+        })
+        
+        let visitAction = UITableViewRowAction(style: .Normal, title: "Visited", handler: {(action: UITableViewRowAction, indexPath: NSIndexPath) -> Void in
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            let visited = self.restaurantVisited[indexPath.row] as Bool
+            self.restaurantVisited[indexPath.row] = !visited
+            cell?.accessoryType = visited ? .None : .Checkmark
+            tableView.setEditing(false, animated: true)
+        })
+
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: {(action: UITableViewRowAction, indexPath: NSIndexPath) -> Void in
             // Delete the row from the data source
             self.restaurantImages.removeAtIndex(indexPath.row)
             self.restaurantLocations.removeAtIndex(indexPath.row)
             self.restaurantNames.removeAtIndex(indexPath.row)
             self.restaurantTypes.removeAtIndex(indexPath.row)
             self.restaurantVisited.removeAtIndex(indexPath.row)
-        
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        })
         
+        callAction.backgroundColor = UIColor.greenColor()
+        
+        return [deleteAction, visitAction, callAction]
     }
-    
 
 }
