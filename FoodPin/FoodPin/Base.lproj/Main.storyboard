@@ -137,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-um-VN1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-um-VN1">
                                 <rect key="frame" x="0.0" y="64" width="600" height="300"/>
                                 <animations/>
                                 <constraints>
@@ -152,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-UT-mP4">
-                                <rect key="frame" x="40" y="454.5" width="39" height="20.5"/>
+                                <rect key="frame" x="40" y="454" width="39" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -179,6 +179,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Been here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmB-BV-u0A">
+                                <rect key="frame" x="40" y="555" width="79.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="restaurantBeenHere" text="Been here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwV-QB-F1c">
+                                <rect key="frame" x="150" y="555" width="77.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="restaurantName" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-0s-Muf">
                                 <rect key="frame" x="150" y="404" width="45" height="20.5"/>
                                 <animations/>
@@ -199,15 +213,19 @@
                             <constraint firstItem="cjp-UT-mP4" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="20" id="XLh-hd-IrA"/>
                             <constraint firstItem="Xcz-eU-s1N" firstAttribute="top" secondItem="cjp-UT-mP4" secondAttribute="top" id="XRG-S7-4Uw"/>
                             <constraint firstItem="B6l-0s-Muf" firstAttribute="top" secondItem="EhO-4e-pwI" secondAttribute="top" id="ZHx-Ti-y3J"/>
+                            <constraint firstItem="lwV-QB-F1c" firstAttribute="top" secondItem="kmB-BV-u0A" secondAttribute="top" id="asw-lZ-EjW"/>
                             <constraint firstItem="1gp-um-VN1" firstAttribute="width" secondItem="aEs-sy-6xf" secondAttribute="width" id="azX-mo-6TH"/>
                             <constraint firstItem="EhO-4e-pwI" firstAttribute="top" secondItem="1gp-um-VN1" secondAttribute="top" constant="10" id="f7n-NM-btI"/>
                             <constraint firstItem="pT0-u2-dSQ" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="130" id="ffh-YZ-toO"/>
                             <constraint firstItem="yYk-eL-83p" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="20" id="iMC-Tn-mDp"/>
                             <constraint firstItem="B6l-0s-Muf" firstAttribute="centerX" secondItem="aEs-sy-6xf" secondAttribute="centerX" id="kL3-3U-ifG"/>
                             <constraint firstItem="cjp-UT-mP4" firstAttribute="top" secondItem="EhO-4e-pwI" secondAttribute="bottom" constant="30" id="kSG-hN-w1a"/>
+                            <constraint firstItem="kmB-BV-u0A" firstAttribute="top" secondItem="yYk-eL-83p" secondAttribute="bottom" constant="30" id="ncN-RN-AYk"/>
+                            <constraint firstItem="lwV-QB-F1c" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="130" id="q3t-dx-DsT"/>
                             <constraint firstItem="pT0-u2-dSQ" firstAttribute="top" secondItem="yYk-eL-83p" secondAttribute="top" id="rko-UQ-a6A"/>
                             <constraint firstItem="yYk-eL-83p" firstAttribute="top" secondItem="cjp-UT-mP4" secondAttribute="bottom" constant="30" id="sFI-xA-Jop"/>
                             <constraint firstItem="EhO-4e-pwI" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="20" id="w93-7f-K4q"/>
+                            <constraint firstItem="kmB-BV-u0A" firstAttribute="leading" secondItem="aEs-sy-6xf" secondAttribute="leadingMargin" constant="20" id="win-4A-zyF"/>
                             <constraint firstItem="1gp-um-VN1" firstAttribute="top" secondItem="61j-7x-e0x" secondAttribute="bottom" id="zHs-H9-5fy"/>
                         </constraints>
                         <variation key="default">
@@ -220,6 +238,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="restaurantBeenHereView" destination="lwV-QB-F1c" id="H7D-5p-53I"/>
                         <outlet property="restaurantImageView" destination="1gp-um-VN1" id="5kH-AN-Z35"/>
                         <outlet property="restaurantLocationView" destination="pT0-u2-dSQ" id="cw1-9h-h9l"/>
                         <outlet property="restaurantNameView" destination="B6l-0s-Muf" id="959-PB-VGC"/>

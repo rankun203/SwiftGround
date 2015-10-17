@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var restaurantNameView: UILabel!
     @IBOutlet weak var restaurantTypeView: UILabel!
     @IBOutlet weak var restaurantLocationView: UILabel!
+    @IBOutlet weak var restaurantBeenHereView: UILabel!
     
     var restaurant: Restaurant!
     
@@ -25,6 +26,7 @@ class DetailViewController: UIViewController {
         restaurantNameView.text = restaurant.name
         restaurantTypeView.text = restaurant.type
         restaurantLocationView.text = restaurant.location
+        restaurantBeenHereView.text = restaurant.isVisited ? "Yes" : "No"
     }
 
     override func didReceiveMemoryWarning() {
