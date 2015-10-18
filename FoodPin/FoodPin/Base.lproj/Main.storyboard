@@ -145,7 +145,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="detailsTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-Tu-mFx">
-                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="404" width="600" height="196"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -157,16 +157,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="detailKey" text="DetailKey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GS-la-F1d">
-                                                    <rect key="frame" x="28" y="11" width="74" height="20.5"/>
+                                                    <rect key="frame" x="28" y="12" width="62.5" height="19.5"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="detailValue" text="DetailValue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSY-3w-kJC">
-                                                    <rect key="frame" x="158" y="11" width="84.5" height="20.5"/>
+                                                    <rect key="frame" x="158" y="11.5" width="73" height="19.5"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -206,11 +206,12 @@
                             <constraint firstItem="VnG-Tu-mFx" firstAttribute="centerX" secondItem="aEs-sy-6xf" secondAttribute="centerX" id="M5d-xJ-hkK"/>
                             <constraint firstItem="1gp-um-VN1" firstAttribute="width" secondItem="aEs-sy-6xf" secondAttribute="width" id="azX-mo-6TH"/>
                             <constraint firstItem="VnG-Tu-mFx" firstAttribute="width" secondItem="aEs-sy-6xf" secondAttribute="width" id="fec-gq-qyd"/>
-                            <constraint firstItem="VnG-Tu-mFx" firstAttribute="top" secondItem="1gp-um-VN1" secondAttribute="bottom" constant="20" id="ume-dP-J3M"/>
+                            <constraint firstItem="VnG-Tu-mFx" firstAttribute="top" secondItem="1gp-um-VN1" secondAttribute="bottom" constant="40" id="ume-dP-J3M"/>
                             <constraint firstItem="1gp-um-VN1" firstAttribute="top" secondItem="61j-7x-e0x" secondAttribute="bottom" id="zHs-H9-5fy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detailsTableView" destination="VnG-Tu-mFx" id="tVo-6e-WC5"/>
                         <outlet property="restaurantImageView" destination="1gp-um-VN1" id="5kH-AN-Z35"/>
                     </connections>
                 </viewController>

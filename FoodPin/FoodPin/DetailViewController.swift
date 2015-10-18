@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var restaurantImageView: UIImageView!
     let detailCellName = "detailCell"
     
@@ -20,6 +21,16 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
 
         // Do any additional setup after loading the view.
         restaurantImageView.image = UIImage(named: restaurant.image)
+        detailsTableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        detailsTableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        detailsTableView.tableFooterView = UIView(frame: CGRectZero)
+        title = restaurant.name
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +38,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -41,9 +51,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(detailCellName, forIndexPath: indexPath) as! DetailTableViewCell
+        cell.backgroundColor = UIColor.clearColor()
         
         switch indexPath.row {
         case 0:

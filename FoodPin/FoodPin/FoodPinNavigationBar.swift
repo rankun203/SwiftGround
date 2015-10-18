@@ -17,6 +17,5 @@ class FoodPinNavigationBar: UINavigationBar {
         // Drawing code
     }
     */
-    
 
 }
